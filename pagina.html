@@ -1,371 +1,321 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Un Curso de Milagros | Taller y Formación</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Configuración básica de la página -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Título de la pestaña del navegador -->
+    <title>Un Curso de Milagros | Taller y Formación</title>
 
-  <!-- BARRA DE NAVEGACIÓN SUPERIOR (HEADER) -->
-  <header class="header-principal">
-    <nav class="navbar">
-      <div class="logo">UCDM</div>
+    <!-- Archivo de estilos de la página -->
+    <link rel="stylesheet" href="/CSS/styles.css" />
 
-      <ul class="nav-menu">
-        <!-- Menú desplegable Recursos -->
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Recursos ▾</a>
-          <div class="dropdown-content">
-            <a href="#guias">Guías de estudio</a>
-            <a href="#descargas">Material descargable</a>
-            <a href="#faq">Preguntas frecuentes</a>
-          </div>
-        </li>
-
-        <li><a href="#info">Información</a></li>
-        <li><a href="#cursos">Calendario</a></li>
-        <li><a href="#inscripcion" class="btn-nav">Inscripción</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- SECCIÓN 1: HERO / BANNER PRINCIPAL -->
-  <header class="seccion-hero">
-    <div class="contenedor-hero">
-      <h1 class="hero-titulo">
-        El milagro de sanar tu percepción:<br>
-        <span>Un curso de milagros</span>
-      </h1>
-      
-      <p class="hero-descripcion">
-        Este taller es una invitación a mirar la vida desde otro nivel de consciencia, 
-        comprender tu responsabilidad en lo que experimentas y activar una forma más 
-        coherente, creativa y consciente de vivir.
-      </p>
-
-      <!-- Barra de datos horizontal -->
-      <div class="barra-datos">
-        <div class="dato-col">
-          <span class="dato-valor">Online</span>
-          <span class="dato-etiqueta">Modalidad</span>
+    <!-- Fuente Montserrat de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- MENÚ SUPERIOR: logo y enlaces de navegación -->
+    <header class="header-principal">
+      <nav class="navbar">
+        <!-- Logo que lleva a otra página -->
+        <div class="logo">
+          <a href="pagina.html">
+            <img src="/IMG/Logo.png" alt="Logo UCDM" />
+          </a>
         </div>
 
-        <div class="divisor"></div>
+        <!-- Enlaces del menú -->
+        <ul class="nav-menu">
+          <li><a href="cursos.html">Cursos</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <div class="dato-col">
-          <span class="dato-valor">12 de Abril 2027</span>
-          <span class="dato-etiqueta">Inicio de la próxima convocatoria</span>
-        </div>
+    <!-- HERO: banner principal con el título del taller -->
+    <header class="seccion-hero">
+      <div class="contenedor-hero">
+        <!-- Título principal -->
+        <h1 class="hero-titulo">
+          El milagro de sanar tu percepción:<br />
+          <span>Un curso de milagros</span>
+        </h1>
 
-        <div class="divisor"></div>
-
-        <div class="dato-col">
-          <span class="dato-valor">30 días</span>
-          <span class="dato-etiqueta">Duración</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- SECCIÓN 2: TARJETAS INTERACTIVAS (FLIP CARDS) -->
-  <section class="seccion-tarjetas">
-    <div class="contenedor">
-      <div class="tarjetas-header">
-        <h2>Un puente hacia la libertad interior</h2>
-        <p>
-          Inspirado en la visión integral y pedagógica del estudio del Ser, uniendo
-          autoindagación, coherencia emocional y comprensión profunda de la mente.
+        <!-- Descripción del taller -->
+        <p class="hero-descripcion">
+          Este taller es una invitación a mirar la vida desde otro nivel de
+          consciencia, comprender tu responsabilidad en lo que experimentas y
+          activar una forma más coherente, creativa y consciente de vivir.
         </p>
-      </div>
 
-      <div class="grid-flip-cards">
-        <!-- Tarjeta 1 -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <span class="card-icon">✨</span>
-              <h3>Perdón Consciente</h3>
-              <p class="frase-inspiradora">
-                «El perdón reconoce que lo que creíste que tu hermano te había hecho, en realidad jamás ocurrió en la verdad de tu Ser.»
-              </p>
-              <span class="hint-voltear">Pasa el mouse para ver más ⟳</span>
+        <!-- Datos del taller: modalidad, inicio y duración -->
+        <div class="barra-datos">
+          <div class="dato-col">
+            <span class="dato-valor">Online</span>
+            <span class="dato-etiqueta">Modalidad</span>
+          </div>
+
+          <!-- Separador entre datos -->
+          <div class="divisor"></div>
+
+          <div class="dato-col">
+            <span class="dato-valor">12 de Abril 2027</span>
+            <span class="dato-etiqueta">Inicio de la próxima convocatoria</span>
+          </div>
+
+          <div class="divisor"></div>
+
+          <div class="dato-col">
+            <span class="dato-valor">30 días</span>
+            <span class="dato-etiqueta">Duración</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN BLANCA: título e introducción -->
+    <section class="seccion-tarjetas">
+      <div class="contenedor">
+        <div class="tarjetas-header">
+          <h2>Un puente hacia la libertad interior</h2>
+          <p>
+            Inspirado en la visión integral y pedagógica del estudio del Ser,
+            uniendo autoindagación, coherencia emocional y comprensión profunda
+            de la mente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRUSEL: imágenes con frases que van cambiando -->
+    <section class="seccion-carrusel-full">
+      <div class="carrusel-contenedor-full">
+        <!-- Diapositiva 1: imagen y frase (la que se muestra al inicio) -->
+        <div class="slide activa">
+          <img
+            src="/IMG/Gemini_Generated_Image_d22ajnd22ajnd22a.jpg"
+            alt="Montañas en silencio"
+            class="slide-imagen"
+          />
+          <!-- Capa con la frase sobre la imagen -->
+          <div class="slide-overlay">
+            <blockquote class="frase-carrusel">
+              «El silencio interior es el espacio sagrado donde la verdad se
+              hace audible.»
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Diapositiva 2 -->
+        <div class="slide">
+          <img
+            src="/IMG/Gemini_Generated_Image_vcnddivcnddivcnd (1).jpg"
+            alt="Bosque y niebla"
+            class="slide-imagen"
+          />
+          <div class="slide-overlay">
+            <blockquote class="frase-carrusel">
+              «No busques cambiar el mundo exterior; elige cambiar tu percepción
+              de él.»
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Diapositiva 3 -->
+        <div class="slide">
+          <img
+            src="/IMG/Gemini_Generated_Image_vcnddivcnddivcnd (2).jpg"
+            alt="Mar en calma"
+            class="slide-imagen"
+          />
+          <div class="slide-overlay">
+            <blockquote class="frase-carrusel">
+              «En la quietud de Su presencia descansan todas mis respuestas.»
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Diapositiva 4 -->
+        <div class="slide">
+          <img
+            src="/IMG/Gemini_Generated_Image_vcnddivcnddivcnd (3).jpg"
+            alt="Luz entre los árboles"
+            class="slide-imagen"
+          />
+          <div class="slide-overlay">
+            <blockquote class="frase-carrusel">
+              «El perdón reconoce que nada real puede ser amenazado y nada
+              irreal existe.»
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Diapositiva 5 -->
+        <div class="slide">
+          <img
+            src="/IMG/Gemini_Generated_Image_vcnddivcnddivcnd.jpg"
+            alt="Cielo nocturno sereno"
+            class="slide-imagen"
+          />
+          <div class="slide-overlay">
+            <blockquote class="frase-carrusel">
+              «Donde hay comprensión absoluta y entrega sincera, el miedo se
+              disuelve por completo.»
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Flechas para ir a la diapositiva anterior y siguiente -->
+        <button
+          type="button"
+          class="carrusel-btn btn-prev"
+          aria-label="Anterior"
+          onclick="cambiarCarrusel(-1)"
+        >
+          &#10094;
+        </button>
+        <button
+          type="button"
+          class="carrusel-btn btn-next"
+          aria-label="Siguiente"
+          onclick="cambiarCarrusel(1)"
+        >
+          &#10095;
+        </button>
+
+        <!-- Puntos indicadores para ir directo a una diapositiva -->
+        <div class="carrusel-puntos">
+          <span class="punto activo" onclick="irACarrusel(0)"></span>
+          <span class="punto" onclick="irACarrusel(1)"></span>
+          <span class="punto" onclick="irACarrusel(2)"></span>
+          <span class="punto" onclick="irACarrusel(3)"></span>
+          <span class="punto" onclick="irACarrusel(4)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE APRENDIZAJE: video y lista de lo que se aprende -->
+    <section class="seccion-aprendizaje">
+      <div class="contenedor-aprendizaje">
+        <!-- Columna izquierda: video -->
+        <div class="columna-video">
+          <div class="video-card">
+            <!-- Video de YouTube incrustado -->
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+                title="Video Introductorio y Explicativo del libro"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              >
+              </iframe>
             </div>
-            <div class="flip-card-back">
-              <h4>Módulo 1: Deshacer el Juicio</h4>
-              <p class="info-curso">
-                Comprende cómo liberar resentimientos arraigados y reprogramar tu percepción para vivir en serenidad.
+
+            <!-- Texto debajo del video -->
+            <div class="video-pie">
+              <span class="video-badge">Guía Audiovisual</span>
+              <p class="video-subtitulo">
+                Comprende los fundamentos y la estructura práctica de las
+                lecciones.
               </p>
-              <div class="acciones-card">
-                <a href="#inscripcion" class="btn-card btn-registro">Inscribirme</a>
-                <a href="https://wa.me/XXXXXXXXXX" target="_blank" class="btn-card btn-whatsapp">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha: lista de aprendizajes -->
+        <div class="columna-contenido">
+          <span class="subtitulo-seccion">Metodología y Enfoque</span>
+          <h2 class="titulo-aprendizaje">¿Qué puedes Aprender?</h2>
+
+          <!-- Lista numerada de aprendizajes -->
+          <ol class="lista-aprendizaje">
+            <li class="item-aprendizaje">
+              <div class="numero-circulo">1</div>
+              <div class="texto-item">
+                <h3>Sanar la Percepción</h3>
+                <p>
+                  Diferenciar entre las proyecciones del ego y la visión real
+                  para responder con serenidad ante cualquier conflicto.
+                </p>
               </div>
-            </div>
-          </div>
-        </div>
+            </li>
 
-        <!-- Tarjeta 2 -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <span class="card-icon">🕊️</span>
-              <h3>Refugio en Dios</h3>
-              <p class="frase-inspiradora">
-                «En la quietud de Su Presencia descansan todas mis respuestas; nada real puede ser amenazado, nada irreal existe.»
-              </p>
-              <span class="hint-voltear">Pasa el mouse para ver más ⟳</span>
-            </div>
-            <div class="flip-card-back">
-              <h4>Módulo 2: Confianza y Quietud</h4>
-              <p class="info-curso">
-                Aprende a responder en lugar de reaccionar ante los desafíos diarios, reconectando con tu fuente de fortaleza.
-              </p>
-              <div class="acciones-card">
-                <a href="#inscripcion" class="btn-card btn-registro">Inscribirme</a>
-                <a href="https://wa.me/XXXXXXXXXX" target="_blank" class="btn-card btn-whatsapp">WhatsApp</a>
+            <li class="item-aprendizaje">
+              <div class="numero-circulo">2</div>
+              <div class="texto-item">
+                <h3>El Arte del Perdón Consciente</h3>
+                <p>
+                  Desmantelar resentimientos acumulados y comprender que liberar
+                  al otro es el acto supremo de liberarte a ti mismo.
+                </p>
               </div>
-            </div>
-          </div>
-        </div>
+            </li>
 
-        <!-- Tarjeta 3 -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <span class="card-icon">🌿</span>
-              <h3>Amor Verdadero</h3>
-              <p class="frase-inspiradora">
-                «El amor no abriga resentimientos. Donde hay comprensión absoluta y entrega sincera, el miedo se disuelve por completo.»
-              </p>
-              <span class="hint-voltear">Pasa el mouse para ver más ⟳</span>
-            </div>
-            <div class="flip-card-back">
-              <h4>Módulo 3: Coherencia del Corazón</h4>
-              <p class="info-curso">
-                Identifica patrones inconscientes que afectan tu bienestar y relaciones para restaurar la coherencia mental.
-              </p>
-              <div class="acciones-card">
-                <a href="#inscripcion" class="btn-card btn-registro">Inscribirme</a>
-                <a href="https://wa.me/XXXXXXXXXX" target="_blank" class="btn-card btn-whatsapp">WhatsApp</a>
+            <li class="item-aprendizaje">
+              <div class="numero-circulo">3</div>
+              <div class="texto-item">
+                <h3>Refugio y Silencio Interior</h3>
+                <p>
+                  Aprender a entrar en el espacio de quietud mental donde las
+                  dudas se disuelven y la voz de la sabiduría se hace audible.
+                </p>
               </div>
-            </div>
-          </div>
+            </li>
+
+            <li class="item-aprendizaje">
+              <div class="numero-circulo">4</div>
+              <div class="texto-item">
+                <h3>Aplicación Práctica Diaria</h3>
+                <p>
+                  Integrar las lecciones en tus relaciones, trabajo y vida
+                  cotidiana para vivir en coherencia emocional sostenida.
+                </p>
+              </div>
+            </li>
+          </ol>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
- <!-- SECCIÓN CARRUSEL FULL-WIDTH (5 IMÁGENES) -->
-<section class="seccion-carrusel-full">
-  <div class="carrusel-contenedor-full">
-    
-    <!-- Diapositiva 1: Naturaleza / Montañas -->
-    <div class="slide activa">
-      <img src="/imagenes/Gemini_Generated_Image_d22ajnd22ajnd22a.jpg" alt="Montañas en silencio" class="slide-imagen">
-      <div class="slide-overlay">
-        <blockquote class="frase-carrusel">
-          «El silencio interior es el espacio sagrado donde la verdad se hace audible.»
-        </blockquote>
-      </div>
-    </div>
+    <!-- BOTÓN FLOTANTE DE WHATSAPP: contacto rápido, siempre visible -->
+    <div class="whatsapp-flotante">
+      <!-- Mensajito que invita a escribir -->
+      <span class="whatsapp-mensaje"
+        >¿Tienes alguna pregunta sobre nosotros o algún curso en específico?
+        Escríbenos.</span
+      >
 
-    <!-- Diapositiva 2: Neblina / Bosque -->
-    <div class="slide">
-      <img src="/imagenes/Gemini_Generated_Image_vcnddivcnddivcnd (1).jpg" alt="Bosque y niebla" class="slide-imagen">
-      <div class="slide-overlay">
-        <blockquote class="frase-carrusel">
-          «No busques cambiar el mundo exterior; elige cambiar tu percepción de él.»
-        </blockquote>
-      </div>
-    </div>
-
-    <!-- Diapositiva 3: Atardecer / Calma marina -->
-    <div class="slide">
-      <img src="/imagenes/Gemini_Generated_Image_vcnddivcnddivcnd (2).jpg" alt="Mar en calma" class="slide-imagen">
-      <div class="slide-overlay">
-        <blockquote class="frase-carrusel">
-          «En la quietud de Su presencia descansan todas mis respuestas.»
-        </blockquote>
-      </div>
+      <!-- Enlace que abre el chat de WhatsApp con un mensaje inicial -->
+      <a
+        href="https://wa.me/573058223920?text=Hola%2C%20tengo%20una%20consulta%20sobre%20el%20taller%20Un%20Curso%20de%20Milagros.%20%C2%BFPodr%C3%ADan%20ayudarme%2C%20por%20favor%3F"
+        class="whatsapp-boton"
+        target="_blank"
+        rel="noopener"
+        aria-label="Escríbenos por WhatsApp"
+      >
+        <!-- Ícono de WhatsApp -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+          />
+        </svg>
+      </a>
     </div>
 
-    <!-- Diapositiva 4: Rayos de luz / Claridad -->
-    <div class="slide">
-      <img src="/imagenes/Gemini_Generated_Image_vcnddivcnddivcnd (3).jpg" alt="Luz entre los árboles" class="slide-imagen">
-      <div class="slide-overlay">
-        <blockquote class="frase-carrusel">
-          «El perdón reconoce que nada real puede ser amenazado y nada irreal existe.»
-        </blockquote>
-      </div>
-    </div>
-
-    <!-- Diapositiva 5: Cielo abierto / Estrellas -->
-    <div class="slide">
-      <img src="/imagenes/Gemini_Generated_Image_vcnddivcnddivcnd.jpg" alt="Cielo nocturno sereno" class="slide-imagen">
-      <div class="slide-overlay">
-        <blockquote class="frase-carrusel">
-          «Donde hay comprensión absoluta y entrega sincera, el miedo se disuelve por completo.»
-        </blockquote>
-      </div>
-    </div>
-
-    <!-- Flechas de navegación -->
-    <button class="carrusel-btn btn-prev" aria-label="Anterior">&#10094;</button>
-    <button class="carrusel-btn btn-next" aria-label="Siguiente">&#10095;</button>
-
-    <!-- Indicadores de 5 puntos -->
-    <div class="carrusel-puntos">
-      <span class="punto activo" data-indice="0"></span>
-      <span class="punto" data-indice="1"></span>
-      <span class="punto" data-indice="2"></span>
-      <span class="punto" data-indice="3"></span>
-      <span class="punto" data-indice="4"></span>
-    </div>
-
-    <!-- REEMPLAZA LOS BOTONES Y PUNTOS DE TU CARRUSEL POR ESTOS: -->
-
-<!-- Botones con acción directa onclick -->
-<button type="button" class="carrusel-btn btn-prev" onclick="cambiarCarrusel(-1)">&#10094;</button>
-<button type="button" class="carrusel-btn btn-next" onclick="cambiarCarrusel(1)">&#10095;</button>
-
-<!-- Puntos con acción directa onclick -->
-<div class="carrusel-puntos">
-  <span class="punto activo" onclick="irACarrusel(0)"></span>
-  <span class="punto" onclick="irACarrusel(1)"></span>
-  <span class="punto" onclick="irACarrusel(2)"></span>
-  <span class="punto" onclick="irACarrusel(3)"></span>
-  <span class="punto" onclick="irACarrusel(4)"></span>
-</div>
-
-<!-- SCRIPT DIRECTO (Pégalo justo antes de </body>) -->
-<script>
-  let slideIndex = 0;
-  let timerCarrusel = null;
-
-  function actualizarSlides() {
-    const slides = document.querySelectorAll('.slide');
-    const puntos = document.querySelectorAll('.punto');
-    
-    if (!slides.length) return;
-
-    // Normalizar si se sale de rango
-    if (slideIndex >= slides.length) slideIndex = 0;
-    if (slideIndex < 0) slideIndex = slides.length - 1;
-
-    // Apagar todos
-    slides.forEach(s => s.classList.remove('activa'));
-    puntos.forEach(p => p.classList.remove('activo'));
-
-    // Encender el actual
-    slides[slideIndex].classList.add('activa');
-    if (puntos[slideIndex]) {
-      puntos[slideIndex].classList.add('activo');
-    }
-  }
-
-  function cambiarCarrusel(n) {
-    slideIndex += n;
-    actualizarSlides();
-    reiniciarTiempo();
-  }
-
-  function irACarrusel(n) {
-    slideIndex = n;
-    actualizarSlides();
-    reiniciarTiempo();
-  }
-
-  function reiniciarTiempo() {
-    clearInterval(timerCarrusel);
-    timerCarrusel = setInterval(() => {
-      slideIndex++;
-      actualizarSlides();
-    }, 5000);
-  }
-
-  // Iniciar automáticamente
-  actualizarSlides();
-  reiniciarTiempo();
-</script>
-  </div>
-</section>
- 
-
-<!-- SECCIÓN: VIDEO EXPLICATIVO Y LO QUE APRENDERÁS -->
-<section class="seccion-aprendizaje">
-  <div class="contenedor-aprendizaje">
-    
-    <!-- COLUMNA IZQUIERDA: REPRODUCTOR DE VIDEO -->
-    <div class="columna-video">
-      <div class="video-card">
-        <!-- Puedes usar una etiqueta <video> o un <iframe> de YouTube/Vimeo -->
-        <div class="video-wrapper">
-          <!-- Ejemplo con video responsivo / maqueta de reproductor -->
-          <iframe 
-            src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" 
-            title="Video Introductorio y Explicativo del libro" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-pie">
-          <span class="video-badge">Guía Audiovisual</span>
-          <p class="video-subtitulo">Comprende los fundamentos y la estructura práctica de las lecciones.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- COLUMNA DERECHA: ¿QUÉ PUEDES APRENDER? -->
-    <div class="columna-contenido">
-      <span class="subtitulo-seccion">Metodología y Enfoque</span>
-      <h2 class="titulo-aprendizaje">¿Qué puedes Aprender?</h2>
-      
-      <ol class="lista-aprendizaje">
-        <!-- Ítem 1 -->
-        <li class="item-aprendizaje">
-          <div class="numero-circulo">1</div>
-          <div class="texto-item">
-            <h3>Sanar la Percepción</h3>
-            <p>Diferenciar entre las proyecciones del ego y la visión real para responder con serenidad ante cualquier conflicto.</p>
-          </div>
-        </li>
-
-        <!-- Ítem 2 -->
-        <li class="item-aprendizaje">
-          <div class="numero-circulo">2</div>
-          <div class="texto-item">
-            <h3>El Arte del Perdón Consciente</h3>
-            <p>Desmantelar resentimientos acumulados y comprender que liberar al otro es el acto supremo de liberarte a ti mismo.</p>
-          </div>
-        </li>
-
-        <!-- Ítem 3 -->
-        <li class="item-aprendizaje">
-          <div class="numero-circulo">3</div>
-          <div class="texto-item">
-            <h3>Refugio y Silencio Interior</h3>
-            <p>Aprender a entrar en el espacio de quietud mental donde las dudas se disuelven y la voz de la sabiduría se hace audible.</p>
-          </div>
-        </li>
-
-        <!-- Ítem 4 -->
-        <li class="item-aprendizaje">
-          <div class="numero-circulo">4</div>
-          <div class="texto-item">
-            <h3>Aplicación Práctica Diaria</h3>
-            <p>Integrar las lecciones en tus relaciones, trabajo y vida cotidiana para vivir en coherencia emocional sostenida.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-
-  </div>
-</section>
-</body>
+    <!-- Script con la lógica del carrusel -->
+    <script src="/JS/script.js" defer></script>
+  </body>
 </html>

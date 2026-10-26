@@ -1,0 +1,983 @@
+/* ===================================================
+   BASE: ajustes generales de toda la página
+=================================================== */
+
+/* Deja todo sin espacios extra para empezar desde cero */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Evita que el menú de arriba tape los títulos al usar enlaces internos */
+html {
+  scroll-padding-top: 76px;
+}
+
+/* Letra, color de fondo y color de texto de toda la página */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding-top: 76px;
+  background-color: #e7e9ee;
+  color: #f8f7f7;
+  line-height: 1.6;
+  width: 100%;
+}
+
+/* Caja centrada que mantiene el contenido ordenado en el medio */
+.contenedor {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ===================================================
+   MENÚ DE ARRIBA
+=================================================== */
+
+/* Barra de arriba que siempre se queda visible al bajar la página */
+.header-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+}
+
+/* Pone el logo a la izquierda y los enlaces a la derecha */
+.navbar {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+}
+
+/* Tamaño del logo */
+.logo img {
+  height: 130px;
+  width: auto;
+  display: block;
+}
+
+/* Enlaces del menú, uno al lado del otro */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+/* Apariencia de los enlaces del menú */
+.nav-menu a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* El enlace cambia de color al pasar el mouse */
+.nav-menu a:hover {
+  color: #38bdf8;
+}
+
+/* Menú desplegable: lista que se abre al pasar el mouse */
+.dropdown {
+  position: relative;
+}
+
+/* Lista del menú desplegable (escondida hasta pasar el mouse) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background-color: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  min-width: 190px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 0;
+}
+
+/* Opciones dentro del menú desplegable */
+.dropdown-content a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+/* Muestra el menú desplegable al pasar el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Botón azul de inscripción dentro del menú */
+.btn-nav {
+  background-color: #2563eb;
+  color: #ffffff !important;
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-nav:hover {
+  background-color: #1d4ed8;
+}
+
+/* Textos de la sección blanca en color negro */
+.tarjetas-header{color: #000000;}
+
+/* ===================================================
+   PORTADA (BANNER PRINCIPAL)
+=================================================== */
+
+/* Banner grande del inicio con fondo oscuro */
+.seccion-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem;
+  background: radial-gradient(circle at center, #1e293b 0%, #0b0f19 80%);
+  text-align: center;
+}
+
+/* Limita el ancho del texto de la portada */
+.contenedor-hero {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Título grande de la portada */
+.hero-titulo {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+/* Texto que describe el taller debajo del título */
+.hero-descripcion {
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 3.5rem;
+  font-weight: 300;
+}
+
+/* Franja con los datos del taller (modalidad, inicio, duración) */
+.barra-datos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+/* Cada dato de la franja */
+.dato-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* El dato se ilumina un poco al pasar el mouse */
+.dato-col:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+/* Texto grande del dato (ejemplo: "Online") */
+.dato-valor {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+/* Texto pequeño que explica el dato (ejemplo: "Modalidad") */
+.dato-etiqueta {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Rayita que separa un dato de otro */
+.divisor {
+  width: 1px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ===================================================
+   SECCIÓN BLANCA Y TARJETAS QUE GIRAN
+=================================================== */
+
+/* Sección de fondo gris claro (la sección blanca) */
+.seccion-tarjetas {
+  padding: 6rem 1.5rem;
+  background-color: #e6e6e6;
+}
+
+/* Título y texto de introducción de la sección */
+.tarjetas-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+}
+
+.tarjetas-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.tarjetas-header p {
+  color: #000000;
+}
+
+/* Ordena las tarjetas en filas y las acomoda según el tamaño de la pantalla */
+.grid-flip-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2rem;
+}
+
+/* Espacio de cada tarjeta */
+.flip-card {
+  background-color: transparent;
+  height: 380px;
+  perspective: 1000px;
+}
+
+/* Parte de la tarjeta que se voltea */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 16px;
+}
+
+/* La tarjeta se voltea al pasar el mouse */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Ajustes que comparten la cara de adelante y la de atrás */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Cara de adelante: fondo blanco con sombra */
+.flip-card-front {
+  background-color: #ffffff;
+  color: #838675;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Dibujito (emoji) de la tarjeta */
+.card-icon {
+  font-size: 2.2rem;
+}
+
+/* Título de la cara de adelante */
+.flip-card-front h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Frase o descripción corta de la cara de adelante */
+.frase-inspiradora {
+  font-size: 0.95rem;
+  color: #475569;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Aviso pequeño "Pasa el mouse para ver más" */
+.hint-voltear {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Cara de atrás: fondo oscuro, se ve al voltear la tarjeta */
+.flip-card-back {
+  background: linear-gradient(145deg, #1e293b 0%, #0b0f19 100%);
+  color: #ffffff;
+  transform: rotateY(180deg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Título de la cara de atrás */
+.flip-card-back h4 {
+  font-size: 1.2rem;
+  color: #38bdf8;
+  margin-top: 0.5rem;
+}
+
+/* Texto que describe el curso en la cara de atrás */
+.info-curso {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Fila donde van los botones de la tarjeta */
+.acciones-card {
+  display: flex;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+/* Forma y tamaño de los botones de las tarjetas */
+.btn-card {
+  flex: 1;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.65rem 0.5rem;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+
+/* Botón azul (Inscribirme) */
+.btn-registro {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Botón verde (WhatsApp o Información) */
+.btn-whatsapp {
+  background-color: #22c55e;
+  color: #ffffff;
+}
+
+/* Los botones se aclaran un poco al pasar el mouse */
+.btn-card:hover {
+  opacity: 0.9;
+}
+
+/* ===================================================
+   CARRUSEL DE IMÁGENES (ANCHO COMPLETO)
+=================================================== */
+
+/* El carrusel ocupa todo el ancho de la pantalla */
+.seccion-carrusel-full {
+  width: 100vw;               /* Ocupa el 100% exacto del ancho de la ventana */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;         /* Rompe cualquier margen de contenedor previo */
+  margin-right: -50vw;
+  overflow: hidden;
+  background-color: #0b0f19;
+}
+
+/* Marco del carrusel con su altura */
+.carrusel-contenedor-full {
+  position: relative;
+  width: 100%;
+  height: 520px;              /* Altura amplia y panorámica */
+  overflow: hidden;
+}
+
+/* Cada imagen está escondida y aparece suavemente cuando le toca */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.9s;
+}
+
+/* La imagen que se está viendo en este momento */
+.slide.activa {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+/* La foto llena todo el espacio sin deformarse */
+.slide-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Capa oscura sobre la foto para que la frase se lea bien */
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(11, 15, 25, 0.45) 0%, rgba(11, 15, 25, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Letra de la frase que va sobre la foto */
+.frase-carrusel {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.1rem;
+  font-style: italic;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 950px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.75);
+}
+
+/* Flechas redondas para pasar a la foto anterior o siguiente */
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1.3rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.25s, transform 0.2s;
+}
+
+/* La flecha se pone azul y crece un poco al pasar el mouse */
+.carrusel-btn:hover {
+  background: rgba(37, 99, 235, 0.85);
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* Lugar de cada flecha: izquierda y derecha */
+.btn-prev {
+  left: 2rem;
+}
+
+.btn-next {
+  right: 2rem;
+}
+
+/* Fila de puntitos que indican en qué foto vas */
+.carrusel-puntos {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6rem;
+  z-index: 5;
+}
+
+/* Cada puntito */
+.punto {
+  width: 9px;
+  height: 9px;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* El puntito de la foto actual */
+.punto.activo {
+  background-color: #38bdf8;
+  width: 26px;
+  border-radius: 13px;
+}
+
+/* Ajustes del carrusel para celular */
+@media (max-width: 768px) {
+  .carrusel-contenedor-full {
+    height: 400px;
+  }
+
+  .frase-carrusel {
+    font-size: 1.35rem;
+  }
+
+  .slide-overlay {
+    padding: 1.5rem 2rem;
+  }
+
+  .btn-prev {
+    left: 0.8rem;
+  }
+
+  .btn-next {
+    right: 0.8rem;
+  }
+}
+
+/* Hace que las flechas siempre se puedan presionar */
+.carrusel-btn {
+  z-index: 100 !important;
+  pointer-events: auto !important;
+}
+
+/* Hace que los puntitos siempre se puedan presionar */
+.carrusel-puntos {
+  z-index: 100 !important;
+  pointer-events: auto !important;
+}
+
+/* Evita que la capa oscura estorbe al hacer clic */
+.slide-overlay {
+  z-index: 2;
+}
+
+/* Forma de cada puntito: redondo y gris suave */
+.carrusel-puntos .punto {
+  width: 12px !important;               /* Círculo perfecto */
+  height: 12px !important;
+  border-radius: 50% !important;        /* Forzar forma redonda */
+  background-color: rgba(255, 255, 255, 0.4) !important; /* Gris suave */
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;            /* Evitar que se aplasten */
+  border: none !important;              /* Eliminar bordes extra */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+}
+
+/* El puntito de la foto actual: celeste y un poquito más grande */
+.carrusel-puntos .punto.activo {
+  background-color: #38bdf8 !important; /* Celeste de la foto */
+  transform: scale(1.15) !important;    /* Ligeramente más grande */
+}
+
+/* ===================================================
+   VIDEO Y "¿QUÉ PUEDES APRENDER?"
+=================================================== */
+
+/* Sección de fondo oscuro con el video y la lista */
+.seccion-aprendizaje {
+  padding: 5.5rem 1.5rem;
+  background-color: #0b0f19;
+  color: #ffffff;
+}
+
+/* Divide la sección en dos partes: video a la izquierda, lista a la derecha */
+.contenedor-aprendizaje {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; /* 2 columnas proporcionales */
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* --- LADO IZQUIERDO: VIDEO --- */
+
+/* Marco que rodea el video */
+.video-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+/* Mantiene el video con forma de pantalla de cine y se ajusta al ancho */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+/* Hace que el video llene todo su espacio */
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Zona de texto debajo del video */
+.video-pie {
+  padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* Etiqueta pequeña "Guía Audiovisual" */
+.video-badge {
+  display: inline-block;
+  background-color: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+/* Texto que explica el video */
+.video-subtitulo {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* --- LADO DERECHO: LISTA NUMERADA --- */
+
+/* Texto pequeño que va encima del título ("Metodología y Enfoque") */
+.subtitulo-seccion {
+  color: #38bdf8;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Título "¿Qué puedes Aprender?" */
+.titulo-aprendizaje {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+/* Lista sin viñetas, con los puntos uno debajo del otro */
+.lista-aprendizaje {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* Cada punto de la lista: círculo con número y su texto al lado */
+.item-aprendizaje {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+/* Al pasar el mouse el punto se resalta y se mueve un poquito */
+.item-aprendizaje:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: translateX(4px);
+}
+
+/* Círculos azules con los números 1, 2, 3 y 4 */
+.numero-circulo {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+  margin-top: 0.2rem;
+}
+
+/* Título de cada punto de la lista */
+.texto-item h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.3rem;
+}
+
+/* Texto de cada punto de la lista */
+.texto-item p {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ===================================================
+   AJUSTES PARA TABLET Y CELULAR
+=================================================== */
+
+/* En pantallas pequeñas, el video y la lista se acomodan uno debajo del otro */
+@media (max-width: 880px) {
+  .contenedor-aprendizaje {
+    grid-template-columns: 1fr; /* Pasa a una sola columna */
+    gap: 2.5rem;
+  }
+
+  .titulo-aprendizaje {
+    font-size: 1.85rem;
+  }
+}
+
+/* ===================================================
+   PÁGINA DE CURSOS
+=================================================== */
+
+/* Portada de la página de cursos, más baja que la del inicio */
+.hero-cursos {
+  min-height: 45vh;
+}
+
+.hero-cursos .hero-descripcion {
+  margin-bottom: 0;
+}
+
+/* Tarjetas de cursos un poco más altas para que respiren */
+.grid-cursos .flip-card {
+  height: 430px;
+}
+
+/* ---------- Etiquetas de los cursos ---------- */
+
+/* Fila donde van las etiquetas (ejemplo: "30 días", "Online") */
+.curso-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Forma de cada etiqueta: pastilla redondeada */
+.etiqueta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--lila);
+  background-color: rgba(163, 112, 168, 0.14);
+  border: 1px solid rgba(163, 112, 168, 0.35);
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+}
+
+/* Etiqueta dorada: curso con convocatoria abierta */
+.etiqueta-estado {
+  background-color: var(--dorado);
+  border-color: var(--dorado);
+  color: var(--noche);
+}
+
+/* Etiqueta plateada: curso que aún no abre */
+.etiqueta-proximo {
+  background-color: rgba(192, 192, 192, 0.25);
+  border-color: var(--plateado);
+  color: var(--texto-suave);
+}
+
+/* ---------- Datos del curso en la cara de atrás ---------- */
+
+/* Lista con duración, inicio y modalidad */
+.curso-detalles {
+  list-style: none;
+  width: 100%;
+}
+
+/* Cada dato: el nombre a la izquierda y el valor a la derecha */
+.curso-detalles li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  font-size: 0.9rem;
+}
+
+/* Nombre del dato (ejemplo: "Duración") */
+.curso-detalles span {
+  color: var(--plateado);
+}
+
+/* Valor del dato (ejemplo: "30 días") */
+.curso-detalles strong {
+  color: #ffffff;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* ---------- Franja final de la página ---------- */
+
+/* Franja oscura con el mensaje "¿No sabes cuál elegir?" */
+.cursos-cta {
+  background-color: var(--noche);
+  text-align: center;
+  padding: 4.5rem 1.5rem;
+}
+
+.cursos-cta h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.cursos-cta p {
+  color: var(--plateado);
+  max-width: 560px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Botón de WhatsApp de esta franja */
+.cursos-cta .btn-card {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+}
+
+/* ===================================================
+   BOTÓN FLOTANTE DE WHATSAPP
+=================================================== */
+
+/* Zona fija abajo a la derecha donde viven el mensajito y el botón */
+.whatsapp-flotante {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Botón verde redondo con el logo de WhatsApp */
+.whatsapp-boton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  animation: whatsapp-pulso 2.5s infinite;
+}
+
+/* Tamaño y color del logo dentro del botón */
+.whatsapp-boton svg {
+  width: 34px;
+  height: 34px;
+  fill: #ffffff;
+}
+
+/* El botón crece un poquito al pasar el mouse */
+.whatsapp-boton:hover {
+  transform: scale(1.1);
+}
+
+/* Mensajito blanco que aparece y desaparece solo */
+.whatsapp-mensaje {
+  position: relative;
+  background: #ffffff;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  white-space: normal;
+  max-width: 220%;
+  opacity: 0;
+  transform: translateX(10px);
+  animation: whatsapp-mensaje-ciclo 20s ease-in-out 3s infinite;
+}
+
+/* Piquito del mensajito que apunta hacia el botón */
+.whatsapp-mensaje::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Controla cuándo aparece el mensajito, cuánto dura y cuándo se va */
+@keyframes whatsapp-mensaje-ciclo {
+  0%   { opacity: 0; transform: translateX(10px); }
+  2%   { opacity: 1; transform: translateX(0); }
+  28%  { opacity: 1; transform: translateX(0); }
+  30%  { opacity: 0; transform: translateX(10px); }
+  100% { opacity: 0; transform: translateX(10px); }
+}
+
+/* Efecto de ondas verdes que salen del botón para llamar la atención */
+@keyframes whatsapp-pulso {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 4px 14px rgba(0, 0, 0, 0.3); }
+  70%  { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 4px 14px rgba(0, 0, 0, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 4px 14px rgba(0, 0, 0, 0.3); }
+}
+
+/* Botón y mensajito más pequeños en celular */
+@media (max-width: 600px) {
+  .whatsapp-flotante { right: 16px; bottom: 16px; }
+  .whatsapp-boton { width: 54px; height: 54px; }
+  .whatsapp-mensaje { font-size: 13px; padding: 8px 12px; }
+}
