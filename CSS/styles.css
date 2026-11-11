@@ -16,7 +16,13 @@ html {
 
 /* Letra, color de fondo y color de texto de toda la página */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   padding-top: 76px;
   background-color: #e7e9ee;
   color: #f8f7f7;
@@ -59,7 +65,7 @@ body {
 
 /* Tamaño del logo */
 .logo img {
-  height: 130px;
+  height: 100px;
   width: auto;
   display: block;
 }
@@ -137,7 +143,9 @@ body {
 }
 
 /* Textos de la sección blanca en color negro */
-.tarjetas-header{color: #000000;}
+.tarjetas-header {
+  color: #000000;
+}
 
 /* ===================================================
    PORTADA (BANNER PRINCIPAL)
@@ -162,7 +170,7 @@ body {
 
 /* Título grande de la portada */
 .hero-titulo {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.25;
@@ -398,14 +406,15 @@ body {
    CARRUSEL DE IMÁGENES (ANCHO COMPLETO)
 =================================================== */
 
-/* El carrusel ocupa todo el ancho de la pantalla */
+/* Carrusel: ocupa el ancho disponible sin generar scroll horizontal */
 .seccion-carrusel-full {
-  width: 100vw;               /* Ocupa el 100% exacto del ancho de la ventana */
+  width: 100%;
+  max-width: 100%;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;         /* Rompe cualquier margen de contenedor previo */
-  margin-right: -50vw;
+  margin-left: 0;
+  margin-right: 0;
+  left: auto;
+  right: auto;
   overflow: hidden;
   background-color: #0b0f19;
 }
@@ -414,7 +423,7 @@ body {
 .carrusel-contenedor-full {
   position: relative;
   width: 100%;
-  height: 520px;              /* Altura amplia y panorámica */
+  height: 520px; /* Altura amplia y panorámica */
   overflow: hidden;
 }
 
@@ -427,7 +436,9 @@ body {
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.9s;
+  transition:
+    opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.9s;
 }
 
 /* La imagen que se está viendo en este momento */
@@ -452,7 +463,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(11, 15, 25, 0.45) 0%, rgba(11, 15, 25, 0.8) 100%);
+  background: radial-gradient(
+    circle at center,
+    rgba(11, 15, 25, 0.45) 0%,
+    rgba(11, 15, 25, 0.8) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -463,7 +478,7 @@ body {
 
 /* Letra de la frase que va sobre la foto */
 .frase-carrusel {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 2.1rem;
   font-style: italic;
   font-weight: 300;
@@ -491,7 +506,9 @@ body {
   cursor: pointer;
   z-index: 5;
   backdrop-filter: blur(4px);
-  transition: background-color 0.25s, transform 0.2s;
+  transition:
+    background-color 0.25s,
+    transform 0.2s;
 }
 
 /* La flecha se pone azul y crece un poco al pasar el mouse */
@@ -579,22 +596,22 @@ body {
 
 /* Forma de cada puntito: redondo y gris suave */
 .carrusel-puntos .punto {
-  width: 12px !important;               /* Círculo perfecto */
+  width: 12px !important; /* Círculo perfecto */
   height: 12px !important;
-  border-radius: 50% !important;        /* Forzar forma redonda */
+  border-radius: 50% !important; /* Forzar forma redonda */
   background-color: rgba(255, 255, 255, 0.4) !important; /* Gris suave */
   cursor: pointer !important;
   transition: all 0.3s ease !important;
   display: inline-block !important;
-  flex-shrink: 0 !important;            /* Evitar que se aplasten */
-  border: none !important;              /* Eliminar bordes extra */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+  flex-shrink: 0 !important; /* Evitar que se aplasten */
+  border: none !important; /* Eliminar bordes extra */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* El puntito de la foto actual: celeste y un poquito más grande */
 .carrusel-puntos .punto.activo {
   background-color: #38bdf8 !important; /* Celeste de la foto */
-  transform: scale(1.15) !important;    /* Ligeramente más grande */
+  transform: scale(1.15) !important; /* Ligeramente más grande */
 }
 
 /* ===================================================
@@ -717,7 +734,9 @@ body {
   gap: 1.2rem;
   padding: 0.8rem 1rem;
   border-radius: 12px;
-  transition: background-color 0.25s ease, transform 0.2s ease;
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease;
 }
 
 /* Al pasar el mouse el punto se resalta y se mueve un poquito */
@@ -803,29 +822,29 @@ body {
   gap: 0.5rem;
 }
 
-/* Forma de cada etiqueta: pastilla redondeada */
+/* Forma de cada etiqueta: pastilla redondeada en azul */
 .etiqueta {
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--lila);
-  background-color: rgba(163, 112, 168, 0.14);
-  border: 1px solid rgba(163, 112, 168, 0.35);
+  color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.3);
   padding: 0.25rem 0.8rem;
   border-radius: 999px;
 }
 
-/* Etiqueta dorada: curso con convocatoria abierta */
+/* Etiqueta celeste: curso con convocatoria abierta */
 .etiqueta-estado {
-  background-color: var(--dorado);
-  border-color: var(--dorado);
-  color: var(--noche);
+  background-color: #38bdf8;
+  border-color: #38bdf8;
+  color: #0b0f19;
 }
 
-/* Etiqueta plateada: curso que aún no abre */
+/* Etiqueta gris: curso que aún no abre */
 .etiqueta-proximo {
-  background-color: rgba(192, 192, 192, 0.25);
-  border-color: var(--plateado);
-  color: var(--texto-suave);
+  background-color: rgba(148, 163, 184, 0.2);
+  border-color: #94a3b8;
+  color: #475569;
 }
 
 /* ---------- Datos del curso en la cara de atrás ---------- */
@@ -842,13 +861,13 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.55rem 0;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.9rem;
 }
 
 /* Nombre del dato (ejemplo: "Duración") */
 .curso-detalles span {
-  color: var(--plateado);
+  color: #94a3b8;
 }
 
 /* Valor del dato (ejemplo: "30 días") */
@@ -862,13 +881,13 @@ body {
 
 /* Franja oscura con el mensaje "¿No sabes cuál elegir?" */
 .cursos-cta {
-  background-color: var(--noche);
+  background-color: #0b0f19;
   text-align: center;
   padding: 4.5rem 1.5rem;
 }
 
 .cursos-cta h2 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.9rem;
   font-weight: 400;
   color: #ffffff;
@@ -876,7 +895,7 @@ body {
 }
 
 .cursos-cta p {
-  color: var(--plateado);
+  color: #cbd5e1;
   max-width: 560px;
   margin: 0 auto 2rem auto;
 }
@@ -941,7 +960,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   white-space: normal;
-  max-width: 220%;
+  max-width: 220px;
   opacity: 0;
   transform: translateX(10px);
   animation: whatsapp-mensaje-ciclo 20s ease-in-out 3s infinite;
@@ -961,23 +980,371 @@ body {
 
 /* Controla cuándo aparece el mensajito, cuánto dura y cuándo se va */
 @keyframes whatsapp-mensaje-ciclo {
-  0%   { opacity: 0; transform: translateX(10px); }
-  2%   { opacity: 1; transform: translateX(0); }
-  28%  { opacity: 1; transform: translateX(0); }
-  30%  { opacity: 0; transform: translateX(10px); }
-  100% { opacity: 0; transform: translateX(10px); }
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  2% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  28% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  30% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
 }
 
 /* Efecto de ondas verdes que salen del botón para llamar la atención */
 @keyframes whatsapp-pulso {
-  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 4px 14px rgba(0, 0, 0, 0.3); }
-  70%  { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 4px 14px rgba(0, 0, 0, 0.3); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 4px 14px rgba(0, 0, 0, 0.3); }
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(37, 211, 102, 0.6),
+      0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+  70% {
+    box-shadow:
+      0 0 0 16px rgba(37, 211, 102, 0),
+      0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(37, 211, 102, 0),
+      0 4px 14px rgba(0, 0, 0, 0.3);
+  }
 }
 
 /* Botón y mensajito más pequeños en celular */
 @media (max-width: 600px) {
-  .whatsapp-flotante { right: 16px; bottom: 16px; }
-  .whatsapp-boton { width: 54px; height: 54px; }
-  .whatsapp-mensaje { font-size: 13px; padding: 8px 12px; }
+  .whatsapp-flotante {
+    right: 16px;
+    bottom: 16px;
+  }
+  .whatsapp-boton {
+    width: 54px;
+    height: 54px;
+  }
+  .whatsapp-mensaje {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* ===================================================
+   PÁGINA DE SERVICIOS
+=================================================== */
+
+/* Fondo gris claro, igual que la sección de tarjetas del inicio */
+.servicios-pagina {
+  background-color: #e6e6e6;
+  color: #0f172a;
+}
+
+/* ---------- Banner de arriba ---------- */
+
+/* Banner oscuro como el del inicio; si hay foto, se ve a la derecha */
+.servicios-hero {
+  padding: 5rem 1.5rem 3.5rem;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11, 15, 25, 0.97) 0%,
+      rgba(11, 15, 25, 0.88) 45%,
+      rgba(11, 15, 25, 0.35) 100%
+    ),
+    url("/IMG/servicios/hero.jpg"),
+    radial-gradient(circle at center, #1e293b 0%, #0b0f19 80%);
+  background-size: cover;
+  background-position: center right;
+}
+
+/* Pone el texto a la izquierda y la frase a la derecha */
+.servicios-hero-contenido {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.servicios-hero-texto {
+  max-width: 560px;
+}
+
+/* Texto pequeño celeste sobre el título ("NUESTROS SERVICIOS") */
+.servicios-etiqueta {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 0.8rem;
+}
+
+/* Título grande del banner (mismo estilo del título del inicio) */
+.servicios-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* Texto que describe los servicios */
+.servicios-hero-texto p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+/* Frase de la derecha, un poco inclinada */
+.servicios-frase-mano {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: #38bdf8;
+  max-width: 220px;
+  transform: rotate(-6deg);
+  margin-right: 10%;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Tarjetas ---------- */
+
+/* Acomoda las 4 tarjetas en 2 columnas */
+.servicios-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Cada tarjeta: blanca con sombra, igual que las del inicio */
+.servicio-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+
+/* La tarjeta sube un poquito al pasar el mouse */
+.servicio-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Foto de arriba (si no hay foto, se ve el degradado oscuro del sitio) */
+.servicio-imagen {
+  --img: none;
+  height: 135px;
+  background-image: var(--img), linear-gradient(145deg, #1e293b, #0b0f19);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Parte de abajo con el texto */
+.servicio-cuerpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 1.6rem 1.7rem;
+}
+
+/* Círculo azul con el ícono, montado sobre la foto */
+.servicio-icono {
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.servicio-icono svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Título del servicio */
+.servicio-card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0f172a;
+  margin-top: 0.8rem;
+}
+
+/* Frase corta debajo del título */
+.servicio-subtitulo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin: 0.3rem 0 0.7rem;
+}
+
+/* Descripción del servicio */
+.servicio-descripcion {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* Lista de lo que incluye el servicio */
+.servicio-lista {
+  list-style: none;
+  margin: 1rem 0 1.5rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.servicio-lista li {
+  font-size: 0.85rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Palomita azul al inicio de cada elemento de la lista */
+.servicio-lista li::before {
+  content: "✓";
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid #2563eb;
+  color: #2563eb;
+  font-size: 0.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón azul de la tarjeta (siempre queda abajo), igual al de Inscribirme */
+.servicio-boton {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+/* El botón se oscurece al pasar el mouse */
+.servicio-boton:hover {
+  background-color: #1d4ed8;
+}
+
+/* ---------- Franja final ---------- */
+
+/* Franja oscura con la frase y una línea a cada lado */
+.servicios-cita {
+  background-color: #0b0f19;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.servicios-cita p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.servicios-cita p::before,
+.servicios-cita p::after {
+  content: "";
+  flex: 0 1 180px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ---------- Celular y tablet ---------- */
+
+/* En celular, las tarjetas van una debajo de otra */
+@media (max-width: 700px) {
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  /* El banner pasa a una sola columna y la frase baja */
+  .servicios-hero-contenido {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .servicios-hero h1 {
+    font-size: 2rem;
+  }
+
+  .servicios-frase-mano {
+    transform: rotate(-3deg);
+    margin-right: 0;
+  }
+
+  .servicios-cita p::before,
+  .servicios-cita p::after {
+    display: none;
+  }
+}
+
+/* Ajustes específicos de la página de servicios */
+.servicios-pagina .servicios-grid {
+  padding-top: 2rem;
+}
+
+/* Evita que los textos largos desborden las tarjetas */
+.servicios-pagina .servicio-card {
+  min-width: 0;
+}
+
+.servicios-pagina .servicio-cuerpo {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .servicios-pagina .grid-cursos .flip-card {
+    height: 430px;
+  }
 }

@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- ==================================================
+         CONFIGURACIÓN GENERAL DEL DOCUMENTO
+         ================================================== -->
+
+    <!-- Permite utilizar caracteres especiales como ñ y tildes -->
+    <meta charset="UTF-8" />
+
+    <!-- Hace que el sitio se adapte a dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Servicios | Un Curso de Milagros</title>
+
+    <!-- Conecta la página HTML con su hoja de estilos CSS -->
+    <link rel="stylesheet" href="/CSS/styles.css" />
+
+    <!-- ==================================================
+         CONFIGURACIÓN DE LA FUENTE TIPOGRÁFICA
+         ================================================== -->
+
+    <!-- Prepara la conexión con Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Permite cargar las fuentes desde el servidor de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importa la fuente Montserrat con diferentes grosores -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ==================================================
+         ENCABEZADO PRINCIPAL Y MENÚ DE NAVEGACIÓN
+         ================================================== -->
+
+    <!-- Contiene el logo y los enlaces principales del sitio -->
+    <header class="header-principal">
+      <!-- Barra de navegación principal -->
+      <nav class="navbar">
+        <!-- Logo de la página: al hacer clic, vuelve al inicio -->
+        <div class="logo">
+          <a href="inicio.html">
+            <!-- Imagen del logo de Un Curso de Milagros -->
+            <img
+              src="/IMG/Emblema_dorado_del_corazón_del_mundo-removebg-preview.png"
+              alt="Logo"
+            />
+          </a>
+        </div>
+
+        <!-- Lista de enlaces del menú de navegación -->
+        <ul class="nav-menu">
+          <!-- Enlace que dirige a la página de inicio -->
+          <li>
+            <a href="inicio.html">Inicio</a>
+          </li>
+
+          <!-- Enlace que dirige a la página de servicios -->
+          <li>
+            <a href="servicios.html">Servicios</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ==================================================
+         CONTENIDO PRINCIPAL DE LA PÁGINA
+         ================================================== -->
+
+    <!-- Agrupa todas las secciones correspondientes a los servicios -->
+    <main class="servicios-pagina">
+      <!-- ==================================================
+           PORTADA PRINCIPAL DE SERVICIOS
+           ================================================== -->
+
+      <!-- Presenta el título y la descripción general de los servicios -->
+      <section class="servicios-hero">
+        <!-- Contenedor que organiza el contenido de la portada -->
+        <div class="servicios-hero-contenido">
+          <!-- Columna que contiene el texto introductorio -->
+          <div class="servicios-hero-texto">
+            <!-- Etiqueta pequeña que identifica la sección -->
+            <span class="servicios-etiqueta"> Nuestros servicios </span>
+
+            <!-- Título principal de la página -->
+            <h1>Un espacio para aprender, transformar y crecer</h1>
+
+            <!-- Descripción introductoria de los servicios -->
+            <p>
+              Encuentra cursos y espacios de acompañamiento diseñados para
+              acompañarte en tu proceso personal.
+            </p>
+          </div>
+
+          <!-- Frase decorativa que complementa la portada -->
+          <p class="servicios-frase-mano">El camino comienza en tu interior</p>
+        </div>
+      </section>
+
+      <!-- ==================================================
+           SECCIÓN 1: UN CURSO DE MILAGROS
+           ================================================== -->
+
+      <!-- Presenta los diferentes programas de formación disponibles -->
+      <section class="seccion-tarjetas">
+        <!-- Contenedor que limita y organiza el contenido -->
+        <div class="contenedor">
+          <!-- Encabezado que introduce los cursos disponibles -->
+          <div class="tarjetas-header">
+            <!-- Título de la sección de cursos -->
+            <h2>Un Curso de Milagros</h2>
+
+            <!-- Descripción general de los programas de formación -->
+            <p>
+              Explora nuestros programas de formación y encuentra el
+              acompañamiento que mejor se adapte a tu proceso de aprendizaje.
+            </p>
+          </div>
+
+          <!-- ==================================================
+               CONTENEDOR DE TARJETAS INTERACTIVAS
+               ================================================== -->
+
+          <!-- Organiza las tarjetas de los cursos mediante una cuadrícula.
+               La clase grid-cursos permite aplicar estilos específicos -->
+          <div class="grid-flip-cards grid-cursos">
+            <!-- ==================================================
+                 CURSO 1: INTRODUCCIÓN A UN CURSO DE MILAGROS
+                 ================================================== -->
+
+            <!-- Tarjeta interactiva que contiene la información del curso -->
+            <article class="flip-card">
+              <!-- Contenedor interno que permite realizar el efecto de giro -->
+              <div class="flip-card-inner">
+                <!-- CARA FRONTAL DE LA TARJETA -->
+                <div class="flip-card-front">
+                  <!-- Icono visual que representa el curso -->
+                  <span class="card-icon">📖</span>
+
+                  <!-- Etiquetas que muestran el estado y la modalidad -->
+                  <div class="curso-etiquetas">
+                    <!-- Indica que actualmente hay plazas disponibles -->
+                    <span class="etiqueta etiqueta-estado">
+                      Plazas abiertas
+                    </span>
+
+                    <!-- Identifica la modalidad del curso -->
+                    <span class="etiqueta">Online</span>
+                  </div>
+
+                  <!-- Nombre principal del curso -->
+                  <h3>Introducción a Un Curso de Milagros</h3>
+
+                  <!-- Descripción breve del contenido del curso -->
+                  <p class="frase-inspiradora">
+                    Conoce los fundamentos básicos y descubre cómo aplicarlos en
+                    tu vida cotidiana.
+                  </p>
+
+                  <!-- Indicación visual para que el usuario descubra el reverso -->
+                  <span class="hint-voltear">
+                    Pasa el cursor para conocer más
+                  </span>
+                </div>
+
+                <!-- CARA POSTERIOR DE LA TARJETA -->
+                <div class="flip-card-back">
+                  <!-- Título que identifica el contenido del programa -->
+                  <h4>Fundamentos básicos</h4>
+
+                  <!-- Descripción detallada del curso -->
+                  <p class="info-curso">
+                    Un primer acercamiento a los conceptos esenciales de Un
+                    Curso de Milagros y su aplicación en la vida diaria.
+                  </p>
+
+                  <!-- Lista con los datos principales del curso -->
+                  <ul class="curso-detalles">
+                    <!-- Duración del programa -->
+                    <li>
+                      <span>Duración</span>
+                      <strong>3 días</strong>
+                    </li>
+
+                    <!-- Modalidad en la que se desarrolla -->
+                    <li>
+                      <span>Modalidad</span>
+                      <strong>Online</strong>
+                    </li>
+
+                    <!-- Cantidad de plazas disponibles -->
+                    <li>
+                      <span>Cupos</span>
+                      <strong>9 plazas</strong>
+                    </li>
+
+                    <!-- Valor económico del curso -->
+                    <li>
+                      <span>Inversión</span>
+                      <strong>9 USD</strong>
+                    </li>
+                  </ul>
+
+                  <!-- Contenedor de los botones de acción -->
+                  <div class="acciones-card">
+                    <!-- Enlace que abre WhatsApp con un mensaje predeterminado
+                         para solicitar la inscripción al curso -->
+                    <a
+                      class="btn-card btn-whatsapp"
+                      href="https://wa.me/573058223920?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20la%20introducci%C3%B3n%20a%20Un%20Curso%20de%20Milagros"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Inscribirme
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==================================================
+                 CURSO 2: ENTRENAMIENTO PERSONALIZADO
+                 ================================================== -->
+
+            <!-- Tarjeta interactiva del entrenamiento individual -->
+            <article class="flip-card">
+              <div class="flip-card-inner">
+                <!-- CARA FRONTAL DE LA TARJETA -->
+                <div class="flip-card-front">
+                  <!-- Icono visual que representa el crecimiento personal -->
+                  <span class="card-icon">🌱</span>
+
+                  <!-- Etiqueta que identifica el tipo de acompañamiento -->
+                  <div class="curso-etiquetas">
+                    <span class="etiqueta"> Entrenamiento 1 a 1 </span>
+                  </div>
+
+                  <!-- Nombre del entrenamiento -->
+                  <h3>Entrenamiento personalizado</h3>
+
+                  <!-- Descripción breve del programa -->
+                  <p class="frase-inspiradora">
+                    Profundiza en los fundamentos y trabaja los temas de tu
+                    proceso personal.
+                  </p>
+
+                  <!-- Indicación para descubrir la información posterior -->
+                  <span class="hint-voltear">
+                    Pasa el cursor para conocer más
+                  </span>
+                </div>
+
+                <!-- CARA POSTERIOR DE LA TARJETA -->
+                <div class="flip-card-back">
+                  <!-- Título que identifica la duración del entrenamiento -->
+                  <h4>Proceso de 45 días</h4>
+
+                  <!-- Información detallada del entrenamiento -->
+                  <p class="info-curso">
+                    Entrenamiento individual que aborda fundamentos básicos,
+                    árbol genealógico, estudio del síntoma y cuarentena.
+                  </p>
+
+                  <!-- Lista de características del entrenamiento -->
+                  <ul class="curso-detalles">
+                    <!-- Duración del proceso -->
+                    <li>
+                      <span>Duración</span>
+                      <strong>45 días</strong>
+                    </li>
+
+                    <!-- Modalidad de acompañamiento -->
+                    <li>
+                      <span>Modalidad</span>
+                      <strong>1 a 1</strong>
+                    </li>
+
+                    <!-- Valor del entrenamiento -->
+                    <li>
+                      <span>Inversión</span>
+                      <strong>19 USD</strong>
+                    </li>
+                  </ul>
+
+                  <!-- Contenedor del botón de contacto -->
+                  <div class="acciones-card">
+                    <!-- Enlace para solicitar información mediante WhatsApp -->
+                    <a
+                      class="btn-card btn-whatsapp"
+                      href="https://wa.me/573058223920?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20el%20entrenamiento%20personalizado%20de%2045%20d%C3%ADas"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Solicitar información
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==================================================
+                 CURSO 3: ACOMPAÑAMIENTO PROFUNDO UCDM
+                 ================================================== -->
+
+            <!-- Tarjeta interactiva del programa de acompañamiento avanzado -->
+            <article class="flip-card">
+              <div class="flip-card-inner">
+                <!-- CARA FRONTAL DE LA TARJETA -->
+                <div class="flip-card-front">
+                  <!-- Icono visual que representa el acompañamiento -->
+                  <span class="card-icon">✨</span>
+
+                  <!-- Etiqueta que identifica la modalidad individual -->
+                  <div class="curso-etiquetas">
+                    <span class="etiqueta"> Acompañamiento 1 a 1 </span>
+                  </div>
+
+                  <!-- Nombre del programa -->
+                  <h3>Acompañamiento profundo UCDM</h3>
+
+                  <!-- Descripción introductoria del programa -->
+                  <p class="frase-inspiradora">
+                    Un proceso de mayor duración para profundizar en tu
+                    aprendizaje.
+                  </p>
+
+                  <!-- Indicación para interactuar con la tarjeta -->
+                  <span class="hint-voltear">
+                    Pasa el cursor para conocer más
+                  </span>
+                </div>
+
+                <!-- CARA POSTERIOR DE LA TARJETA -->
+                <div class="flip-card-back">
+                  <!-- Título que identifica la duración del proceso -->
+                  <h4>Proceso de 90 días</h4>
+
+                  <!-- Descripción detallada del acompañamiento -->
+                  <p class="info-curso">
+                    Incluye cuarentena, árbol genealógico, transgeneracional,
+                    fundamentos y espacio para realizar preguntas durante el
+                    proceso.
+                  </p>
+
+                  <!-- Lista con las características del programa -->
+                  <ul class="curso-detalles">
+                    <!-- Duración total -->
+                    <li>
+                      <span>Duración</span>
+                      <strong>90 días</strong>
+                    </li>
+
+                    <!-- Modalidad de atención -->
+                    <li>
+                      <span>Modalidad</span>
+                      <strong>1 a 1</strong>
+                    </li>
+
+                    <!-- Inversión del programa -->
+                    <li>
+                      <span>Inversión</span>
+                      <strong>39.99 USD</strong>
+                    </li>
+                  </ul>
+
+                  <!-- Contenedor del botón de contacto -->
+                  <div class="acciones-card">
+                    <!-- Enlace para consultar el proceso mediante WhatsApp -->
+                    <a
+                      class="btn-card btn-whatsapp"
+                      href="https://wa.me/573058223920?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20el%20acompa%C3%B1amiento%20UCDM%20de%2090%20d%C3%ADas"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Conocer el proceso
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+           SECCIÓN 2: OTROS SERVICIOS DE ACOMPAÑAMIENTO
+           ================================================== -->
+
+      <!-- Presenta los servicios adicionales ofrecidos -->
+      <section class="seccion-tarjetas">
+        <!-- Encabezado de la sección de servicios -->
+        <div class="tarjetas-header">
+          <!-- Título principal de los servicios adicionales -->
+          <h2>Otros servicios de acompañamiento</h2>
+
+          <!-- Descripción general de los servicios disponibles -->
+          <p>
+            También contamos con diferentes espacios de orientación y
+            acompañamiento para trabajar en tu bienestar personal y familiar.
+          </p>
+        </div>
+
+        <!-- ==================================================
+             CONTENEDOR DE TARJETAS DE SERVICIOS
+             ================================================== -->
+
+        <!-- Organiza las tarjetas de servicios en una cuadrícula -->
+        <div class="servicios-grid">
+          <!-- ==================================================
+               SERVICIO 1: TERAPIA HOLÍSTICA
+               ================================================== -->
+
+          <!-- Tarjeta que presenta el servicio de terapia holística -->
+          <article class="servicio-card">
+            <!-- Imagen de presentación del servicio.
+                 La variable CSS --img permite establecer la imagen
+                 que utilizarán los estilos de la tarjeta -->
+            <div
+              class="servicio-imagen"
+              style="
+                --img: url(&quot;/IMG/Gemini_Generated_Image_d22ajnd22ajnd22a.jpg&quot;);
+              "
+              role="img"
+              aria-label="Terapia holística"
+            ></div>
+
+            <!-- Contenedor que agrupa el contenido textual del servicio -->
+            <div class="servicio-cuerpo">
+              <!-- Icono decorativo del servicio -->
+              <span class="servicio-icono">✧</span>
+
+              <!-- Nombre del servicio -->
+              <h2>Terapia holística</h2>
+
+              <!-- Frase corta que complementa el título -->
+              <p class="servicio-subtitulo">
+                Un espacio para tu bienestar integral.
+              </p>
+
+              <!-- Descripción general del acompañamiento -->
+              <p class="servicio-descripcion">
+                Acompañamiento orientado al bienestar personal, el
+                autoconocimiento y la conexión con tus emociones.
+              </p>
+
+              <!-- Lista de actividades y características del servicio -->
+              <ul class="servicio-lista">
+                <!-- Primera característica -->
+                <li>Entrevista inicial</li>
+
+                <!-- Segunda característica -->
+                <li>Definición de línea terapéutica</li>
+
+                <!-- Tercera característica -->
+                <li>Actividades de yoga y baile según corresponda</li>
+
+                <!-- Cuarta característica -->
+                <li>
+                  Orientación para acudir a un especialista cuando se requiera
+                </li>
+              </ul>
+
+              <!-- Enlace que permite consultar información del servicio
+                   directamente por WhatsApp -->
+              <a
+                class="servicio-boton"
+                href="https://wa.me/573058223920?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20la%20terapia%20hol%C3%ADstica"
+                target="_blank"
+                rel="noopener"
+              >
+                Consultar servicio →
+              </a>
+            </div>
+          </article>
+
+          <!-- ==================================================
+               SERVICIO 2: TERAPIA INDIVIDUAL EN ADICCIONES
+               ================================================== -->
+
+          <!-- Tarjeta que presenta el servicio de atención individual -->
+          <article class="servicio-card">
+            <!-- Imagen representativa del servicio -->
+            <div
+              class="servicio-imagen"
+              style="--img: url(&quot;/IMG/servicios/adicciones.jpg&quot;)"
+              role="img"
+              aria-label="Acompañamiento individual"
+            ></div>
+
+            <!-- Contenedor del contenido del servicio -->
+            <div class="servicio-cuerpo">
+              <!-- Icono decorativo -->
+              <span class="servicio-icono">♡</span>
+
+              <!-- Nombre del servicio -->
+              <h2>Terapia individual en adicciones</h2>
+
+              <!-- Frase introductoria -->
+              <p class="servicio-subtitulo">Un paso hacia una nueva etapa.</p>
+
+              <!-- Descripción del acompañamiento individual -->
+              <p class="servicio-descripcion">
+                Espacio individual para conversar sobre la situación, conocer
+                sus posibles causas y consecuencias, y revisar alternativas de
+                atención.
+              </p>
+
+              <!-- Lista de características del servicio -->
+              <ul class="servicio-lista">
+                <!-- Entrevista inicial con el usuario -->
+                <li>Entrevista inicial</li>
+
+                <!-- Información sobre las adicciones -->
+                <li>Causas y consecuencias de las adicciones</li>
+
+                <!-- Orientación sobre alternativas de atención -->
+                <li>Orientación sobre opciones de tratamiento</li>
+
+                <!-- Valor de la consulta -->
+                <li>Consulta: <strong>9 USD</strong></li>
+              </ul>
+
+              <!-- Enlace para solicitar información mediante WhatsApp -->
+              <a
+                class="servicio-boton"
+                href="https://wa.me/573058223920?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20la%20terapia%20individual%20en%20adicciones"
+                target="_blank"
+                rel="noopener"
+              >
+                Solicitar información →
+              </a>
+            </div>
+          </article>
+
+          <!-- ==================================================
+               SERVICIO 3: COACHING PARA FAMILIAS CON ADICCIONES
+               ================================================== -->
+
+          <!-- Tarjeta que presenta el servicio de orientación familiar -->
+          <article class="servicio-card">
+            <!-- Imagen representativa del acompañamiento familiar -->
+            <div
+              class="servicio-imagen"
+              style="--img: url(&quot;/IMG/servicios/familias.jpg&quot;)"
+              role="img"
+              aria-label="Acompañamiento familiar"
+            ></div>
+
+            <!-- Contenedor de la información del servicio -->
+            <div class="servicio-cuerpo">
+              <!-- Icono decorativo que representa el entorno familiar -->
+              <span class="servicio-icono">⌂</span>
+
+              <!-- Nombre del servicio -->
+              <h2>Coaching para familias con adicciones</h2>
+
+              <!-- Frase introductoria del acompañamiento -->
+              <p class="servicio-subtitulo">Acompañar también es aprender.</p>
+
+              <!-- Descripción general del servicio -->
+              <p class="servicio-descripcion">
+                Orientación para familiares que buscan comprender mejor la
+                situación y conocer formas de acompañar a su ser querido.
+              </p>
+
+              <!-- Lista de características del acompañamiento -->
+              <ul class="servicio-lista">
+                <!-- Entrevista inicial -->
+                <li>Entrevista inicial</li>
+
+                <!-- Información general sobre las adicciones -->
+                <li>Información general sobre las adicciones</li>
+
+                <!-- Recomendaciones de acompañamiento familiar -->
+                <li>Sugerencias de acompañamiento familiar</li>
+
+                <!-- Valor de la consulta -->
+                <li>Consulta: <strong>19.99 USD</strong></li>
+              </ul>
+
+              <!-- Enlace para solicitar orientación por WhatsApp -->
+              <a
+                class="servicio-boton"
+                href="https://wa.me/573058223920?text=Hola,%20quiero%20orientaci%C3%B3n%20para%20mi%20familia"
+                target="_blank"
+                rel="noopener"
+              >
+                Quiero orientación →
+              </a>
+            </div>
+          </article>
+
+          <!-- ==================================================
+               SERVICIO 4: CONSTELACIONES FAMILIARES
+               ================================================== -->
+
+          <!-- Tarjeta que presenta el servicio de constelaciones familiares -->
+          <article class="servicio-card">
+            <!-- Imagen representativa de las constelaciones familiares -->
+            <div
+              class="servicio-imagen"
+              style="--img: url(&quot;/IMG/servicios/constelaciones.jpg&quot;)"
+              role="img"
+              aria-label="Constelaciones familiares"
+            ></div>
+
+            <!-- Contenedor del contenido textual -->
+            <div class="servicio-cuerpo">
+              <!-- Icono decorativo del servicio -->
+              <span class="servicio-icono">◎</span>
+
+              <!-- Nombre del servicio -->
+              <h2>Constelaciones familiares</h2>
+
+              <!-- Frase introductoria -->
+              <p class="servicio-subtitulo">Explora tus vínculos familiares.</p>
+
+              <!-- Descripción general del servicio -->
+              <p class="servicio-descripcion">
+                Espacio de exploración y reflexión sobre las relaciones y
+                dinámicas dentro del sistema familiar.
+              </p>
+
+              <!-- Lista de características del servicio -->
+              <ul class="servicio-lista">
+                <!-- Información sobre la metodología utilizada -->
+                <li>Información sobre la metodología</li>
+
+                <!-- Orientación sobre las modalidades disponibles -->
+                <li>Orientación sobre la modalidad disponible</li>
+              </ul>
+
+              <!-- Enlace para conocer más información por WhatsApp -->
+              <a
+                class="servicio-boton"
+                href="https://wa.me/573058223920?text=Hola,%20quiero%20conocer%20el%20servicio%20de%20constelaciones%20familiares"
+                target="_blank"
+                rel="noopener"
+              >
+                Conocer más →
+              </a>
+            </div>
+          </article>
+
+          <!-- ==================================================
+               SERVICIO 5: BIONEUROEMOCIÓN
+               ================================================== -->
+
+          <!-- Tarjeta que presenta el servicio de bioneuroemoción -->
+          <article class="servicio-card">
+            <!-- Imagen representativa del servicio -->
+            <div
+              class="servicio-imagen"
+              style="--img: url(&quot;/IMG/servicios/bioneuroemocion.jpg&quot;)"
+              role="img"
+              aria-label="Bioneuroemoción"
+            ></div>
+
+            <!-- Contenedor de la información del servicio -->
+            <div class="servicio-cuerpo">
+              <!-- Icono decorativo del servicio -->
+              <span class="servicio-icono">✺</span>
+
+              <!-- Nombre del servicio -->
+              <h2>Bioneuroemoción</h2>
+
+              <!-- Frase introductoria -->
+              <p class="servicio-subtitulo">
+                Un espacio de reflexión personal.
+              </p>
+
+              <!-- Descripción del acompañamiento -->
+              <p class="servicio-descripcion">
+                Espacio de acompañamiento para explorar experiencias personales
+                y la relación que cada persona establece con ellas.
+              </p>
+
+              <!-- Lista de características del servicio -->
+              <ul class="servicio-lista">
+                <!-- Información sobre el enfoque de trabajo -->
+                <li>Información sobre el enfoque</li>
+
+                <!-- Consulta de modalidad y disponibilidad -->
+                <li>Consulta la modalidad y disponibilidad</li>
+              </ul>
+
+              <!-- Enlace para consultar información mediante WhatsApp -->
+              <a
+                class="servicio-boton"
+                href="https://wa.me/573058223920?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20Bioneuroemoci%C3%B3n"
+                target="_blank"
+                rel="noopener"
+              >
+                Consultar servicio →
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================================================
+           FRASE FINAL DE LA PÁGINA
+           ================================================== -->
+
+      <!-- Sección decorativa que cierra el contenido de los servicios -->
+      <section class="servicios-cita">
+        <!-- Frase que transmite el mensaje principal del sitio -->
+        <p>«El cambio comienza cuando decides mirar hacia adentro.»</p>
+      </section>
+    </main>
+
+    <!-- ==================================================
+         BOTÓN FLOTANTE DE WHATSAPP
+         ================================================== -->
+
+    <!-- Contenedor del botón de contacto que permanece visible
+         según los estilos definidos en CSS -->
+    <div class="whatsapp-flotante">
+      <!-- Mensaje que invita al visitante a comunicarse -->
+      <span class="whatsapp-mensaje">
+        ¿Tienes alguna pregunta sobre nuestros cursos o servicios? Escríbenos.
+      </span>
+
+      <!-- Enlace que abre una conversación de WhatsApp
+           con un mensaje predeterminado -->
+      <a
+        href="https://wa.me/573058223920?text=Hola,%20tengo%20una%20consulta%20sobre%20sus%20cursos%20y%20servicios"
+        class="whatsapp-boton"
+        target="_blank"
+        rel="noopener"
+        aria-label="Escríbenos por WhatsApp"
+      >
+        <!-- ==================================================
+             ICONO SVG DE WHATSAPP
+             ================================================== -->
+
+        <!-- SVG permite mostrar un icono vectorial sin utilizar
+             una imagen externa. El viewBox establece sus dimensiones -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <!-- Trazo que dibuja el símbolo de WhatsApp -->
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+          />
+        </svg>
+      </a>
+    </div>
+  </body>
+</html>
